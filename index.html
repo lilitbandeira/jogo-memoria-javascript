@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da memória</title>
+    <link rel="icon" href="imgs/icon-memo.png">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" class="css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="page landing-page">
+        <section class='row align-items-center'>
+            <div class="control-buttons">
+                <button class='btn btn-info pulse animated infinite col-lg-5 col-md-8 col-sm-6 col-xs-6' data-bs-hover-animate="jello">Iniciar Jogo</button>
+            </div>
+            <div class="info-container col-lg-10 col-md-8 col-sm-8 col-xs-12">
+                <div class="titulo">
+                    <h1>Jogo da Memória - Versão Mangá</h1>
+                </div>
+                <div class="name">
+                    Bem vinde <span></span> !
+                </div>
+                <div class="tries">
+                    Tentativas erradas: <span>0</span>
+                </div>
+            </div>
+            <div class="game-imgs-blocks col-lg-10 col-md-8 col-sm-8 col-xs-12">
+                <div class="game-block" data-manga="black-clover">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/black-clover-manga.jpg" alt="Black Clover">
+                    </div>
+                </div>
+                <div class="game-block" data-manga="black-clover">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/black-clover-manga.jpg" alt="Black Clover">
+                    </div>
+                </div>
+                <div class="game-block" data-manga="boku-no-hero">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/boku-no-hero-manga.jpg" alt="Boku no Hero">
+                    </div>
+                </div>
+                <div class="game-block" data-manga="boku-no-hero">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/boku-no-hero-manga.jpg" alt="Boku no Hero">
+                    </div>
+                </div>
+                <div class="game-block" data-manga="devilman">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/devilman-manga.jpg" alt="Devilman">
+                    </div>
+                </div>
+                <div class="game-block" data-manga="devilman">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/devilman-manga.jpg" alt="Devilman">
+                    </div>
+                </div>
+                <div class="game-block" data-manga="hunter-x-hunter">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/hunter-x-hunter-manga.jpg" alt="Hunter x Hunter">
+                    </div>
+                </div>
+                <div class="game-block" data-manga="hunter-x-hunter">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/hunter-x-hunter-manga.jpg" alt="Hunter x Hunter">
+                    </div>
+                </div>
+                <div class="game-block" data-manga="kimetsu-no-yaiba">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/kimetsu-no-yaiba-manga.jpg" alt="Kimetsu no Yaiba">
+                    </div>
+                </div>
+                <div class="game-block" data-manga="kimetsu-no-yaiba">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/kimetsu-no-yaiba-manga.jpg" alt="Kimetsu no Yaiba">
+                    </div>
+                </div>
+                <div class="game-block" data-manga="naruto">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/naruto-manga.jpg" alt="Naruto">
+                    </div>
+                </div>
+                <div class="game-block" data-manga="naruto">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/naruto-manga.jpg" alt="Naruto">
+                    </div>
+                </div>
+                <div class="game-block" data-manga="one-piece">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/one-piece-manga.jpg" alt="One Piece">
+                    </div>
+                </div>
+                <div class="game-block" data-manga="one-piece">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/one-piece-manga.jpg" alt="One Piece">
+                    </div>
+                </div>
+                <div class="game-block" data-manga="saint-seiya">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/saint-seiya-manga.jpg" alt="Saint Seiya">
+                    </div>
+                </div>
+                <div class="game-block" data-manga="saint-seiya">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/saint-seiya-manga.jpg" alt="Saint Seiya">
+                    </div>
+                </div>
+                <div class="game-block" data-manga="sakura">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/sakura-card-captors-manga.jpg" alt="Sakura Card Captors">
+                    </div>
+                </div>
+                <div class="game-block" data-manga="sakura">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/sakura-card-captors-manga.jpg" alt="Sakura Card Captors">
+                    </div>
+                </div>
+                <div class="game-block" data-manga="shaman-king">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/shaman-king-manga.jpg" alt="Shaman King">
+                    </div>
+                </div>
+                <div class="game-block" data-manga="shaman-king">
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/shaman-king-manga.jpg" alt="Shaman King">
+                    </div>
+                </div>
+            </div>    
+        </section>
+    </main>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Algum texto no modal..</p>
+        </div>
+    </div>
+    <audio id="success2" src="audios/sucess-audio.mp3" preload="auto"></audio>
+    <audio id="fail" src="audios/fail-audio.mp3" preload="auto"></audio>
+    <footer class="site-footer">
+        <div class="container"></div>
+            <div>
+                <p class="copyright-text">Desenvolvido por Lilit</p>
+            </div>
+            <div>
+                <ul class="social-icons">
+                    <li>
+                        <a href="https://www.linkedin.com/in/lilitbandeira" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.github.com/lilitbandeira" target="_blank"><i class="fa fa-github"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src='js/jquery.min.js'></script>
+    <script src='bootstrap/js/bootstrap.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
+    <script src='js/script.js'></script>
+</body>
+</html>

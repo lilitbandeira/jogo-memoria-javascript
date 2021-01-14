@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;  /* opção minha */
+    margin: 0; /* opção minha */
+}
+html, body {
+    height: 100%;
+    width: 99%;
+}
+body {
+    font-family: 'Exo 2', sans-serif;
+    background-color: #FF6EB4;
+}
+.control-buttons {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: #FF82AB;
+    transition: 0.9s steps(10);
+}
+.control-buttons button {
+    position: absolute;
+    left: 25%;
+    top: 40%;
+    background-color: #8B0A50;
+    padding: 1em;
+    text-align: center;
+    font-size:  3rem;
+    font-family: 'Changa', sans-serif;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0.1rem 0.3rem 2.1rem 0 #8B1C62;
+    transition: 0.9s ease-in-out;
+}
+
+@media (max-width: 1190.98px) {
+    .control-buttons button {
+      font-size: 40px;
+      text-align: center;
+    }
+    section {
+      width: 99%;
+      padding: 5px 0 5px 37px;
+    }
+  }
+  @media (max-width: 992.98px) {
+    .control-buttons button {
+      font-size: 35px;
+      text-align: center;
+    }
+    section {
+      width: 99%;
+      padding: 5px 0 5px 37px;
+    }
+  }
+  @media (max-width: 767.98px) {
+    .control-buttons button {
+      font-size: 30px;
+      text-align: center;
+    }
+    section {
+      width: 99%;
+      padding: 5px 0 5px 37px;
+    }
+  }
+  @media (max-width: 615px){
+    .control-buttons button {
+      font-size: 25px;
+      text-align: center;
+    }
+    section {
+      width: 99%;
+      padding: 5px 0 5px 37px;
+    }
+  }
+  
+  @media (max-device-width: 516px) and (orientation: landscape)
+  {
+    .control-buttons button
+    {
+      font-size: 20px;
+      text-align: center;
+    }
+    section {
+      width: 99%;
+      padding: 5px 0 5px 37px;
+    }
+  }
+  @media (max-width:513px)
+  {
+    .control-buttons button
+    {
+      font-size: 15px;
+      text-align: center;
+    }
+    section {
+      width: 100%;
+      padding: 5px 0 5px 37px;
+    }
+  }
+  @media (max-width: 348px)
+  {
+    .control-buttons button
+    {
+      font-size: 9px;
+      text-align: center;
+    }
+    section {
+      width: 100%;
+      padding: 5px 0 5px 37px;
+    }
+  }
+
+.info-container {
+    width: 1080px;
+    margin: 1rem auto 0;
+    padding: 1.1rem;
+    font-size: 2.5rem;
+    overflow: auto;
+    color: #8B0A50;
+}
+.info-container .titulo {
+    text-align: center;
+    font-family: 'Changa', sans-serif;
+    padding-bottom: 2rem;
+    text-shadow: 1px 1px 2px white;
+}
+.info-container .name {
+    float: left;
+    width: 50%;
+    font-family: 'Changa', sans-serif;
+    padding-left: 5rem;
+    text-align: center;
+    text-shadow: .5px .5px 1px white;
+}
+.info-container .tries {
+    float: left;
+    width: 50%;
+    font-family: 'Changa', sans-serif;
+    text-align: center;
+    padding-right: 5rem;
+    text-shadow: .5px .5px 1px white;
+}
+.game-imgs-blocks {
+    display: flex;
+    width: 1100px;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+.game-imgs-blocks.no-clicking {
+    pointer-events: none;
+}
+.game-imgs-blocks .game-block {
+    height: 210px;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    flex: 1 0 140px;
+    margin: 0 5px 10px;
+}
+.game-imgs-blocks .game-block .front {
+    background-color: #8B0A50;
+    line-height: 200px;
+}
+.game-imgs-blocks .game-block .back {
+    background-color: #1BEAFF;
+    transform: rotateY(180deg);
+}
+.game-imgs-blocks .game-block .back img {
+    width: 134px;
+    height: 200px;
+}
+.game-imgs-blocks .game-block .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+    border: 5px solid #1BEAFF;
+}
+.game-imgs-blocks .game-block .front::before {
+    content: '💎';
+    font-size: 100px;
+}
+.game-imgs-blocks .game-block.is-flipped, .game-imgs-blocks .game-block.is-match {
+    transform: rotateY(180deg);  
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    pointer-events: none;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.modal-content {
+    background-color: #FF6EB4;
+    margin: 15% auto;
+    padding: 20px;
+    border: 3px solid #8B0A50;
+    box-shadow: 0.1rem 0.3rem 2rem 0 rgb(0,0,0);
+    color: #8B0A50;
+    width: 80%;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Changa', sans-serif;
+}
+.close {
+    color: #4F4F4F;
+    float: right;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: right;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.site-footer {
+    color:  #8B0A50;
+    padding: auto;
+    margin-top: 2rem;
+    width: 100%;
+    font-size: 1em;
+    font-weight: 800;
+    text-align: center;
+}
+.site-footer .copyright-text {
+    text-transform: uppercase; 
+    letter-spacing: .3rem;   
+    text-shadow: .5px .5px .5px white;
+}
+.site-footer .social-icons {
+    padding-left: 0;
+    list-style: none;
+}
+.site-footer .social-icons a {
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    margin-left: 6px;
+    margin-right: 0;
+    color: #8B0A50;
+    font-size: 1.8em;
+    display: inline-block;
+    text-align: center;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear
+}
+.site-footer .social-icons li {
+    display: inline-block;
+}
+.social-icons a:hover {
+    color: #1BEAFF; 
+}
+
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:20px
+  }
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text, .site-footer .social-icons
+  {
+    text-align:center  
+  }
+}
